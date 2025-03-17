@@ -1,0 +1,162 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  color: #e50914;
+}
+
+.hero {
+  height: 80vh;
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Surprise Me Section */
+.surprise-me-section {
+  background-color: #1a1a1a;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.surprise-me-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.surprise-me-info {
+  margin-bottom: 30px;
+}
+
+.surprise-me-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #e50914;
+}
+
+.surprise-me-info p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.movie-section {
+  padding: 20px 50px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  
+  .hero-content {
+    left: 20px;
+    bottom: 50px;
+    max-width: 80%;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    -webkit-line-clamp: 2;
+  }
+  
+  .surprise-me-section {
+    padding: 30px 0;
+  }
+  
+  .surprise-me-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .surprise-me-info p {
+    font-size: 1rem;
+  }
+  
+  .movie-section {
+    padding: 20px;
+  }
+  
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    bottom: 30px;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .surprise-me-section {
+    padding: 20px 0;
+  }
+} 

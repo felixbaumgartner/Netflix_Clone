@@ -1,0 +1,179 @@
+.movies-page {
+  padding: 20px 50px;
+  min-height: 100vh;
+}
+
+.movies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.movies-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.movies-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Genre Dropdown */
+.genre-dropdown {
+  position: relative;
+}
+
+.genre-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.genre-dropdown-btn:hover {
+  background-color: #444;
+}
+
+.genre-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  margin-top: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  min-width: 200px;
+}
+
+.genre-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.genre-option:hover {
+  background-color: #444;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  gap: 5px;
+}
+
+.view-btn {
+  background-color: #333;
+  color: #777;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.view-btn.active {
+  color: white;
+  background-color: #444;
+}
+
+.view-btn:hover {
+  background-color: #444;
+}
+
+/* Movies Grid View */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Movies List View */
+.movies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.movies-list .movie-card {
+  display: flex;
+  height: 150px;
+  width: 100%;
+}
+
+.movies-list .movie-poster {
+  width: 100px;
+  height: 150px;
+}
+
+.movies-list .movie-card-overlay {
+  position: relative;
+  opacity: 1;
+  background: none;
+  padding-left: 20px;
+}
+
+.movies-list .movie-title {
+  font-size: 18px;
+  white-space: normal;
+}
+
+.genre-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.no-movies {
+  text-align: center;
+  padding: 50px 0;
+  color: #aaa;
+  font-size: 18px;
+}
+
+/* Genre Rows */
+.genre-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movies-page {
+    padding: 20px;
+  }
+  
+  .movies-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .movies-header h1 {
+    font-size: 2rem;
+  }
+  
+  .movies-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+} 

@@ -1,0 +1,133 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 70px; /* To account for the fixed header */
+}
+
+/* Netflix Button Styles */
+.netflix-btn {
+  background-color: #e50914;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.netflix-btn:hover {
+  background-color: #f40612;
+}
+
+.netflix-btn-secondary {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.netflix-btn-secondary:hover {
+  background-color: rgba(109, 109, 110, 0.9);
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Movie Card */
+.movie-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-card:hover .movie-card-info {
+  opacity: 1;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .hero-content {
+    left: 20px;
+    bottom: 50px;
+    max-width: 80%;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+} 
